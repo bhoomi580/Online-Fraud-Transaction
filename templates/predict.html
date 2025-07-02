@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins & display=swap');
+
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins',sans-serif;
+        }
+
+        .header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 100px;
+            background: rgba(255,255,255,.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            backdrop-filter: blur(7px);
+            border-radius: 2x solid rgba(255,255,255,.2);
+        }
+
+        .logo{
+            text-decoration: none;
+            color: whitesmoke;
+            font-size: 35px;
+            font-weight: 600;
+            margin-left: 5px;
+        }
+
+        nav a{
+          text-decoration:none;
+          font-size:20px;
+          color:white;
+          margin-right:35px;
+          transition:.3s;
+        }
+
+        nav a:hover{
+           color:blue;
+        }
+
+
+        body{
+          margin: 0;
+          padding: 0;
+          background-image: url(../static/imgpredict.jpg);
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+        }
+
+        .form-container{
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0.0.0.0.1);
+        }
+
+        .am{
+            padding-top: 50%;
+        }
+
+        .button-primary{
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff6600;
+            color:#fff;
+            font-size: 16px;
+            border:none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .button-primary:hover{
+            background-color: #e65c00;
+        }
+
+        .cd{
+        padding-top: 50%;
+      }
+
+      .site-section{
+        padding-top: 50%;
+      }
+
+    </style>
+</head>
+<body>
+    <header>
+        <a class="logo">Online Fraud</a>
+      <nav>
+        <a  href="/">Home</a>
+        <a  href="/login">Login</a>
+        <a  href="/predict">Predict</a>
+    
+      </nav>
+    </header> 
+    <div class="am">
+        <form name="form1" action="{{url_for('prediction')}}" method="post" class="form-container">
+            <div class="span5">
+                <div class="control-group">
+                    <center><label class="control-label" for="inputMessage"><b></b></label><br></center>
+                    <br>
+                    
+                    
+                    
+
+                    <div class="controls">
+                        <center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b> type: </b> <input type="text" name="type" placeholder="type" required="requried" width="300" style="width:300px" </center>
+                    </div>
+                    <br>
+
+                    <div class="controls">
+                       <center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b> amount: </b> <input type="text" name="amount" placeholder="amount" required="requried" width="300" style="width:300px" </center>
+                    </div>
+                    <br>
+                
+                    <div class="controls">
+                        <center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>  oldbalanceOrg: </b> <input type="text" name="oldbalanceOrg" placeholder="oldbalanceOrg" required="requried" width="300" style="width:300px" </center>
+                    </div>
+                    <br>
+
+                    <div class="controls">
+                        <center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b> newbalanceOrig: </b> <input type="text" name="newbalanceOrig " placeholder="newbalanceOrig " required="requried" width="300" style="width:300px" </center>
+                    </div>
+                    <br>
+
+                <center><button type="submit" class="button-primary"> Predict </button> </center>
+
+            </div>
+        </form>
+        <br>
+        <br>
+        
+        <center>
+            <h1 style="color:black;"> Prediction is: {{prediction_text}}</h1>
+        </center>
+
+    </div>
+
+</body>
+</html>

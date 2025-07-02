@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+<style>
+
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        background-image:url(../static/pic2.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    .background{
+        width: 430px;
+        height: 520px;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        left:50%;
+        top:50%;
+    }
+
+    .background.shape{
+        height: 200px;
+        width: 200px;
+       position: absolute;
+       border-radius: 0.5px;
+    }
+
+    form{
+        height: 520px;
+        width: 400px;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top:50%;
+        left:50%;
+        border-radius:10px;
+        backdrop-filter: blur(5px);
+        border: 2px solid rgba(255,255,255,0.1);
+        box-shadow:0 0 40px rgba(8,7,16,0.6);
+        padding:50px 35px;
+    }
+
+    form*{
+        font-family: 'Poppins',sans-serif;
+        color: white;
+        letter-spacing: 0.5px;
+        outline: none;
+        border: none;
+    }
+
+    form h3{
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 42px;
+        text-align: center;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    label{
+        display: block;
+        margin-top: 30px;
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    input{
+        display: block;
+        height: 50px;
+        width: 100%;
+        background-color: whitesmoke;
+        border-radius: 3px;
+        padding: 0 10px;
+        margin-top: 8px;
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    ::placeholder{
+        color: black;
+    }
+
+    button{
+        margin-top: 50px;
+        width:100%;
+        background-color:blue;
+        color:white;
+        padding:15px 0;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    button:hover{
+        transition:0.5s ease-in-out;
+        background-color: lightblue;
+        color:black;
+    }
+
+    .header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 100px;
+            background: rgba(255,255,255,.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            backdrop-filter: blur(7px);
+            border-radius: 2x solid rgba(255,255,255,2);
+    }
+
+    .menu-container{
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 50px;
+    }
+
+    .logo{
+            text-decoration: none;
+            color: white;
+            font-size: 35px;
+            font-weight: 600;
+            margin-top: 50px;
+            margin-left: 50px;
+    }
+
+    .menu{
+          text-decoration:none;
+          font-size:20px;
+          color:white;
+          margin-right:35px;
+          transition:.3s;
+    }
+
+    .menu:hover{
+           color:blue;
+    }
+
+
+    body{
+        background-size:cover;
+        background-repeat:no-repeat;
+        background-position:center;
+        height:90vh;
+    }
+
+    section{
+        padding-top:50px 0;
+    }
+
+</style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Online fraud</a>
+     <div class="menu-container">
+        <a  class="menu" href="/" >Home</a>
+        <a  class="menu" href="/login"  >Login</a>
+    </div>
+    </header>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form method="POST" >
+        <h3>Login Here</h3>
+        <label for="username">Username</label>
+        <input type="text" placeholder="username" name="username" id="username">
+        <label for="password">Password</label>
+        <input type="password" placeholder="password" name="password" id="password">
+        <button>Log In</button>
+    </form>
+     
+</body>
+</html>

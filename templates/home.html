@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins & display=swap');
+
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins',sans-serif;
+        }
+
+        .header{
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 100px;
+            background: rgba(255,255,255,.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            backdrop-filter: blur(7px);
+            border-radius: 2x solid rgba(255,255,255,2);
+        }
+
+        .logo{
+            text-decoration: none;
+            color: white;
+            font-size: 35px;
+            font-weight: 600;
+            margin-left: 5px;
+        }
+
+        .menu{
+          text-decoration:none;
+          font-size:20px;
+          color:white;
+          margin-right:35px;
+          transition:.3s;
+        }
+
+        .menu:hover{
+           color:blue;
+        }
+
+
+        body{
+          margin: 0;
+          padding: 0;
+          background-image: url(../static/pic1.webp);
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="#" class="logo">Home Page</a>
+        <div>
+            <a  class="menu" href="/" >Home</a>
+            <a  class="menu" href="/login" >Login</a>
+        </div>
+    </div>
+</body>
+</html>
